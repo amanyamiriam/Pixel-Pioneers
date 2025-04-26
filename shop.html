@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Pixel Pioneers Sneakers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pixel Pioneers</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <aside class="filters">
+            <h2>Filters</h2>
+            
+            <div class="filter-section">
+                <h3>Brand</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="brand" value="nike"> Nike</label>
+                    <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                    <label><input type="checkbox" name="brand" value="jordan"> Jordan</label>
+                    <label><input type="checkbox" name="brand" value="puma"> Puma</label>
+                    <label><input type="checkbox" name="brand" value="newbalance"> New Balance</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Color</h3>
+                <div class="color-options">
+                    <label class="color-option">
+                        <input type="checkbox" name="color" value="black">
+                        <span class="color-swatch" style="background-color: black;"></span>
+                        Black
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" name="color" value="white">
+                        <span class="color-swatch" style="background-color: white;"></span>
+                        White
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" name="color" value="red">
+                        <span class="color-swatch" style="background-color: red;"></span>
+                        Red
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" name="color" value="blue">
+                        <span class="color-swatch" style="background-color: blue;"></span>
+                        Blue
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" id="price-slider" min="0" max="500" step="50">
+                    <div class="price-inputs">
+                        <input type="number" id="min-price" placeholder="Min">
+                        <span>-</span>
+                        <input type="number" id="max-price" placeholder="Max">
+                    </div>
+                </div>
+            </div>
+
+            <button class="apply-filters">Apply Filters</button>
+        </aside>
+
+        <section class="products">
+            <div class="products-header">
+                <h1>All Sneakers</h1>
+                <select class="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker1.jpg" alt="Nike Air Max">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Nike</span>
+                        <h3>Air Max 90</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: black;"></span>
+                            <span class="dot" style="background: white;"></span>
+                            <span class="dot" style="background: red;"></span>
+                        </div>
+                        <p class="price">$199.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker2.jpg" alt="Adidas Ultra Boost">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Adidas</span>
+                        <h3>Ultra Boost 22</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: white;"></span>
+                            <span class="dot" style="background: blue;"></span>
+                        </div>
+                        <p class="price">$179.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker3.jpg" alt="Jordan 1">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Jordan</span>
+                        <h3>Air Jordan 1 High</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: red;"></span>
+                            <span class="dot" style="background: black;"></span>
+                            <span class="dot" style="background: white;"></span>
+                        </div>
+                        <p class="price">$249.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker4.jpg" alt="Puma RS-X">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Puma</span>
+                        <h3>RS-X Tech</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: black;"></span>
+                            <span class="dot" style="background: blue;"></span>
+                        </div>
+                        <p class="price">$129.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker5.jpg" alt="New Balance 550">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">New Balance</span>
+                        <h3>550 White Green</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: white;"></span>
+                            <span class="dot" style="background: #00FF00;"></span>
+                        </div>
+                        <p class="price">$159.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker6.jpg" alt="Nike Dunk">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Nike</span>
+                        <h3>Dunk Low Panda</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: black;"></span>
+                            <span class="dot" style="background: white;"></span>
+                        </div>
+                        <p class="price">$149.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker7.jpg" alt="Adidas Forum">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Adidas</span>
+                        <h3>Forum Low</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: white;"></span>
+                            <span class="dot" style="background: blue;"></span>
+                        </div>
+                        <p class="price">$119.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sneaker8.jpg" alt="Jordan 4">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">Jordan</span>
+                        <h3>Air Jordan 4 Retro</h3>
+                        <div class="color-dots">
+                            <span class="dot" style="background: red;"></span>
+                            <span class="dot" style="background: black;"></span>
+                        </div>
+                        <p class="price">$289.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Your existing footer code -->
+    </footer>
+</body>
+</html>

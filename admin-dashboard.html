@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Pixel Pioneers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Pixel Pioneers</h2>
+                <span>Admin Panel</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="#" class="nav-item active">
+                    <span class="icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">👟</span>
+                    Products
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">🛒</span>
+                    Orders
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">👥</span>
+                    Customers
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">📈</span>
+                    Analytics
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="search-bar">
+                    <input type="search" placeholder="Search products...">
+                </div>
+                <div class="admin-profile">
+                    <span class="notifications">🔔</span>
+                    <img src="images/admin-avatar.png" alt="Admin" class="avatar">
+                </div>
+            </header>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(45deg, #FF416C, #FF4B2B)">📦</div>
+                    <div class="stat-info">
+                        <h3>Total Products</h3>
+                        <p>248</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(45deg, #4158D0, #C850C0)">💰</div>
+                    <div class="stat-info">
+                        <h3>Total Sales</h3>
+                        <p>$52,489</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(45deg, #0093E9, #80D0C7)">👥</div>
+                    <div class="stat-info">
+                        <h3>Customers</h3>
+                        <p>1,248</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="product-management">
+                <div class="section-header">
+                    <h2>Product Management</h2>
+                    <button class="add-product-btn">+ Add New Product</button>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/sneaker1.jpg" alt="Nike Air Max 90">
+                            <div class="product-actions">
+                                <button class="edit-btn">✏️ Edit</button>
+                                <button class="delete-btn">🗑️ Delete</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Nike Air Max 90</h3>
+                            <p class="sku">SKU: NK-AM90-001</p>
+                            <div class="stock-price">
+                                <span class="stock">In Stock: 45</span>
+                                <span class="price">$199.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Product Cards -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/sneaker2.jpg" alt="Adidas Ultra Boost">
+                            <div class="product-actions">
+                                <button class="edit-btn">✏️ Edit</button>
+                                <button class="delete-btn">🗑️ Delete</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Adidas Ultra Boost</h3>
+                            <p class="sku">SKU: AD-UB22-002</p>
+                            <div class="stock-price">
+                                <span class="stock">In Stock: 32</span>
+                                <span class="price">$179.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/sneaker3.jpg" alt="Jordan 1 High">
+                            <div class="product-actions">
+                                <button class="edit-btn">✏️ Edit</button>
+                                <button class="delete-btn">🗑️ Delete</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Air Jordan 1 High</h3>
+                            <p class="sku">SKU: AJ-1H-003</p>
+                            <div class="stock-price">
+                                <span class="stock low-stock">In Stock: 5</span>
+                                <span class="price">$249.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="orders-management">
+                <div class="section-header">
+                    <h2>Recent Orders</h2>
+                    <button class="view-all-btn">View All Orders</button>
+                </div>
+
+                <div class="orders-grid">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <h3>Order #12345</h3>
+                            <span class="order-status pending">Pending</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="customer-info">
+                                <img src="images/customer1.jpg" alt="Customer" class="customer-avatar">
+                                <div class="customer-details">
+                                    <h4>John Smith</h4>
+                                    <p>john.smith@email.com</p>
+                                </div>
+                            </div>
+                            <div class="order-items-preview">
+                                <img src="images/sneaker1.jpg" alt="Nike Air Max 90">
+                                <img src="images/sneaker2.jpg" alt="Adidas Ultra Boost">
+                                <span class="more-items">+2</span>
+                            </div>
+                            <div class="order-info">
+                                <p class="order-date">Oct 15, 2023</p>
+                                <p class="order-total">$529.97</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <h3>Order #12346</h3>
+                            <span class="order-status shipped">Shipped</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="customer-info">
+                                <img src="images/customer2.jpg" alt="Customer" class="customer-avatar">
+                                <div class="customer-details">
+                                    <h4>Emma Wilson</h4>
+                                    <p>emma.w@email.com</p>
+                                </div>
+                            </div>
+                            <div class="order-items-preview">
+                                <img src="images/sneaker3.jpg" alt="Jordan 1 High">
+                                <span class="more-items">+1</span>
+                            </div>
+                            <div class="order-info">
+                                <p class="order-date">Oct 14, 2023</p>
+                                <p class="order-total">$249.99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <h3>Order #12347</h3>
+                            <span class="order-status delivered">Delivered</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="customer-info">
+                                <img src="images/customer3.jpg" alt="Customer" class="customer-avatar">
+                                <div class="customer-details">
+                                    <h4>Michael Brown</h4>
+                                    <p>m.brown@email.com</p>
+                                </div>
+                            </div>
+                            <div class="order-items-preview">
+                                <img src="images/sneaker4.jpg" alt="Nike Air Force 1">
+                                <img src="images/sneaker5.jpg" alt="Nike Air Max 95">
+                                <img src="images/sneaker6.jpg" alt="Nike Air Max Plus">
+                            </div>
+                            <div class="order-info">
+                                <p class="order-date">Oct 13, 2023</p>
+                                <p class="order-total">$469.97</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="product-form-modal">
+                <div class="modal-content">
+                    <h2>Add New Product</h2>
+                    <form class="product-form">
+                        <div class="form-group">
+                            <label>Product Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Brand</label>
+                                <select required>
+                                    <option value="">Select Brand</option>
+                                    <option value="nike">Nike</option>
+                                    <option value="adidas">Adidas</option>
+                                    <option value="jordan">Jordan</option>
+                                    <option value="puma">Puma</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select required>
+                                    <option value="">Select Category</option>
+                                    <option value="running">Running</option>
+                                    <option value="basketball">Basketball</option>
+                                    <option value="lifestyle">Lifestyle</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="number" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Stock Quantity</label>
+                                <input type="number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Product Images</label>
+                            <input type="file" multiple accept="image/*">
+                        </div>
+                        <div class="color-options">
+                            <label>Available Colors</label>
+                            <div class="color-picker">
+                                <input type="color" value="#000000">
+                                <button type="button" class="add-color">+ Add Color</button>
+                            </div>
+                        </div>
+                        <div class="size-options">
+                            <label>Available Sizes</label>
+                            <div class="size-checkboxes">
+                                <label><input type="checkbox"> US 7</label>
+                                <label><input type="checkbox"> US 8</label>
+                                <label><input type="checkbox"> US 9</label>
+                                <label><input type="checkbox"> US 10</label>
+                                <label><input type="checkbox"> US 11</label>
+                                <label><input type="checkbox"> US 12</label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="save-btn">Save Product</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+<div class="customer-analytics-container">
+                <section class="customer-section">
+                    <div class="section-header">
+                        <h2>Recent Customers</h2>
+                        <button class="view-all-btn">View All</button>
+                    </div>
+                    <div class="customer-list">
+                        <div class="customer-row">
+                            <img src="images/customer1.jpg" alt="Customer">
+                            <div class="customer-row-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Last purchase: 2 days ago</p>
+                            </div>
+                            <span class="customer-status status-active">Active</span>
+                        </div>
+                        <div class="customer-row">
+                            <img src="images/customer2.jpg" alt="Customer">
+                            <div class="customer-row-info">
+                                <h4>Mike Anderson</h4>
+                                <p>Last purchase: 5 days ago</p>
+                            </div>
+                            <span class="customer-status status-active">Active</span>
+                        </div>
+                        <div class="customer-row">
+                            <img src="images/customer3.jpg" alt="Customer">
+                            <div class="customer-row-info">
+                                <h4>Emily Parker</h4>
+                                <p>Joined today</p>
+                            </div>
+                            <span class="customer-status status-new">New</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2>Sales Analytics</h2>
+                        <select class="time-range">
+                            <option>Last 7 days</option>
+                            <option>Last 30 days</option>
+                            <option>Last 3 months</option>
+                        </select>
+                    </div>
+                    <div class="analytics-chart">
+                        <!-- Chart will be rendered here -->
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #FF416C"></span>
+                            <span>Total Sales</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #4158D0"></span>
+                            <span>Orders</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #0093E9"></span>
+                            <span>Customers</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="ai-recommender">
+                <div class="section-header">
+                    <h2>AI Shoe Recommender</h2>
+                    <div class="ai-status">
+                        <span class="status-dot active"></span>
+                        AI Active
+                    </div>
+                </div>
+
+                <div class="recommender-grid">
+                    <div class="recommendation-card">
+                        <div class="user-profile">
+                            <img src="images/customer1.jpg" alt="Sarah Johnson">
+                            <div class="user-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Style: Athletic & Casual</p>
+                            </div>
+                        </div>
+                        <div class="ai-suggestions">
+                            <div class="suggestion-item">
+                                <img src="images/sneaker4.jpg" alt="Nike Air Force 1">
+                                <div class="suggestion-details">
+                                    <h5>Nike Air Force 1</h5>
+                                    <p>98% Match</p>
+                                    <div class="match-reasons">
+                                        <span>👟 Previous Purchases</span>
+                                        <span>🎯 Style Match</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="suggestion-item">
+                                <img src="images/sneaker5.jpg" alt="Adidas Ultra Boost">
+                                <div class="suggestion-details">
+                                    <h5>Adidas Ultra Boost</h5>
+                                    <p>95% Match</p>
+                                    <div class="match-reasons">
+                                        <span>🏃‍♀️ Activity Match</span>
+                                        <span>💫 Trending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-insights">
+                        <h3>AI Insights</h3>
+                        <div class="insight-cards">
+                            <div class="insight-card">
+                                <div class="insight-icon">🎯</div>
+                                <div class="insight-content">
+                                    <h4>Style Prediction</h4>
+                                    <p>Users with similar profiles show 85% interest in athletic-casual crossover styles</p>
+                                </div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-icon">📈</div>
+                                <div class="insight-content">
+                                    <h4>Trend Analysis</h4>
+                                    <p>Rising demand for sustainable materials among this customer segment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ai-chatbot">
+                <div class="section-header">
+                    <h2>AI Support Assistant</h2>
+                    <div class="chat-status online">
+                        <span class="status-indicator"></span>
+                        Available 24/7
+                    </div>
+                </div>
+
+                <div class="chat-container">
+                    <div class="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <img src="images/ai-avatar.png" alt="AI Assistant">
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                                <span class="message-time">10:00 AM</span>
+                            </div>
+                        </div>
+
+                        <div class="message user-message">
+                            <div class="message-content">
+                                <p>I need help with order #12345</p>
+                                <span class="message-time">10:01 AM</span>
+                            </div>
+                        </div>
+
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <img src="images/ai-avatar.png" alt="AI Assistant">
+                            </div>
+                            <div class="message-content">
+                                <p>I've found the order. It's currently in processing status. Would you like me to check its details?</p>
+                                <div class="quick-actions">
+                                    <button>View Order Details</button>
+                                    <button>Track Shipment</button>
+                                    <button>Modify Order</button>
+                                </div>
+                                <span class="message-time">10:01 AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message...">
+                        <div class="input-actions">
+                            <button class="attach-btn">📎</button>
+                            <button class="send-btn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </section>

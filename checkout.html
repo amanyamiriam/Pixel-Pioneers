@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pixel Pioneers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pixel Pioneers</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-progress">
+            <div class="progress-step active">
+                <div class="step-number">1</div>
+                <span>Shipping</span>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">2</div>
+                <span>Payment</span>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <span>Review</span>
+            </div>
+        </div>
+
+        <div class="checkout-content">
+            <div class="checkout-form">
+                <h2>Shipping Information</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Street Address</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            <select required>
+                                <option value="">Select State</option>
+                                <option value="CA">California</option>
+                                <option value="NY">New York</option>
+                                <option value="TX">Texas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ZIP Code</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+
+                    <div class="shipping-options">
+                        <h3>Shipping Method</h3>
+                        <div class="shipping-option">
+                            <input type="radio" name="shipping" id="standard" checked>
+                            <label for="standard">
+                                <span class="option-name">Standard Shipping</span>
+                                <span class="option-price">Free</span>
+                                <span class="option-time">5-7 Business Days</span>
+                            </label>
+                        </div>
+                        <div class="shipping-option">
+                            <input type="radio" name="shipping" id="express">
+                            <label for="express">
+                                <span class="option-name">Express Shipping</span>
+                                <span class="option-price">$14.99</span>
+                                <span class="option-time">2-3 Business Days</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-items">
+                    <div class="order-item">
+                        <img src="images/sneaker1.jpg" alt="Nike Air Max 90">
+                        <div class="item-info">
+                            <h4>Nike Air Max 90</h4>
+                            <p>Size: US 9.5 | Color: Black</p>
+                            <p class="item-price">$199.99</p>
+                        </div>
+                        <span class="item-quantity">x1</span>
+                    </div>
+                    <div class="order-item">
+                        <img src="images/sneaker3.jpg" alt="Air Jordan 1">
+                        <div class="item-info">
+                            <h4>Air Jordan 1 High OG</h4>
+                            <p>Size: US 10 | Color: Red/Black</p>
+                            <p class="item-price">$179.99</p>
+                        </div>
+                        <span class="item-quantity">x1</span>
+                    </div>
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$379.98</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>$38.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span>$417.98</span>
+                    </div>
+                </div>
+
+                <button class="continue-btn">Continue to Payment</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

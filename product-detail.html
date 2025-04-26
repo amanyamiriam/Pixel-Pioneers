@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max 90 - Pixel Pioneers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pixel Pioneers</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="images/sneaker1-large.jpg" alt="Nike Air Max 90" id="mainImage">
+            </div>
+            <div class="thumbnail-grid">
+                <img src="images/sneaker1-angle1.jpg" alt="Angle 1" onclick="changeImage(this.src)">
+                <img src="images/sneaker1-angle2.jpg" alt="Angle 2" onclick="changeImage(this.src)">
+                <img src="images/sneaker1-angle3.jpg" alt="Angle 3" onclick="changeImage(this.src)">
+                <img src="images/sneaker1-angle4.jpg" alt="Angle 4" onclick="changeImage(this.src)">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <div class="product-header">
+                <span class="brand">Nike</span>
+                <h1>Air Max 90</h1>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-count">(150 Reviews)</span>
+                </div>
+            </div>
+
+            <div class="product-price">
+                <span class="current-price">$199.99</span>
+                <span class="original-price">$249.99</span>
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="color-selection">
+                <h3>Color</h3>
+                <div class="color-options">
+                    <button class="color-btn active" style="background: black;"></button>
+                    <button class="color-btn" style="background: white; border: 1px solid #ddd;"></button>
+                    <button class="color-btn" style="background: red;"></button>
+                </div>
+            </div>
+
+            <div class="size-selection">
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <button class="size-guide">Size Guide</button>
+                </div>
+                <div class="size-grid">
+                    <button class="size-btn">US 7</button>
+                    <button class="size-btn">US 7.5</button>
+                    <button class="size-btn">US 8</button>
+                    <button class="size-btn">US 8.5</button>
+                    <button class="size-btn">US 9</button>
+                    <button class="size-btn active">US 9.5</button>
+                    <button class="size-btn">US 10</button>
+                    <button class="size-btn">US 10.5</button>
+                    <button class="size-btn disabled">US 11</button>
+                    <button class="size-btn">US 11.5</button>
+                    <button class="size-btn">US 12</button>
+                    <button class="size-btn">US 13</button>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" value="1" min="1" max="10">
+                    <button class="qty-btn plus">+</button>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="wishlist-btn">♥</button>
+            </div>
+
+            <div class="product-description">
+                <h3>Product Details</h3>
+                <p>The Nike Air Max 90 stays true to its running heritage with iconic waffle outsole, stitched overlays and classic TPU accents. Classic Nike Air cushioning adds comfort to your journey.</p>
+                
+                <div class="features">
+                    <ul>
+                        <li>Foam midsole</li>
+                        <li>Rubber Waffle outsole</li>
+                        <li>Mesh upper enhances breathability</li>
+                        <li>Padded collar for comfort</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="product-slider">
+            <div class="related-product-card">
+                <img src="images/sneaker2.jpg" alt="Nike Dunk Low">
+                <h3>Nike Dunk Low</h3>
+                <p class="price">$149.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+
+            <div class="related-product-card">
+                <img src="images/sneaker3.jpg" alt="Air Jordan 1">
+                <h3>Air Jordan 1 High OG</h3>
+                <p class="price">$179.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+
+            <div class="related-product-card">
+                <img src="images/sneaker4.jpg" alt="Nike Air Force 1">
+                <h3>Nike Air Force 1 '07</h3>
+                <p class="price">$109.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+
+            <div class="related-product-card">
+                <img src="images/sneaker5.jpg" alt="Nike Air Max 95">
+                <h3>Nike Air Max 95</h3>
+                <p class="price">$189.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+
+            <div class="related-product-card">
+                <img src="images/sneaker6.jpg" alt="Nike Air Max Plus">
+                <h3>Nike Air Max Plus</h3>
+                <p class="price">$169.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+
+            <div class="related-product-card">
+                <img src="images/sneaker7.jpg" alt="Nike Air Max 270">
+                <h3>Nike Air Max 270</h3>
+                <p class="price">$159.99</p>
+                <button class="quick-view-btn">Quick View</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
