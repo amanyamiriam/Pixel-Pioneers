@@ -17,6 +17,12 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="active cart-link">
+                        Cart
+                        <span class="cart-counter">2</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -97,52 +103,124 @@
                     <img src="images/sneaker4.jpg" alt="Nike Air Force 1">
                     <h3>Nike Air Force 1</h3>
                     <p>$109.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart(this)">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker5.jpg" alt="Nike Air Max 95">
                     <h3>Nike Air Max 95</h3>
                     <p>$189.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker6.jpg" alt="Nike Air Max Plus">
                     <h3>Nike Air Max Plus</h3>
                     <p>$169.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker7.jpg" alt="Adidas Ultraboost">
                     <h3>Adidas Ultraboost 22</h3>
                     <p>$179.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker8.jpg" alt="New Balance 550">
                     <h3>New Balance 550</h3>
                     <p>$129.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker9.jpg" alt="Puma RS-X">
                     <h3>Puma RS-X Tech</h3>
                     <p>$139.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker10.jpg" alt="Jordan 4">
                     <h3>Air Jordan 4 Retro</h3>
                     <p>$219.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="images/sneaker11.jpg" alt="Nike Dunk Low">
                     <h3>Nike Dunk Low Retro</h3>
                     <p>$149.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
             </div>
         </div>
     </main>
+
+        <script>
+            // Update cart counter based on cart items
+            function updateCartCounter() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                const counter = document.querySelector('.cart-counter');
+                counter.textContent = cartItems.length;
+            }
+
+            // Handle remove item functionality
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.cart-item').remove();
+                    updateCartCounter();
+                    updateTotal();
+                });
+            });
+
+            // Handle quantity changes
+            document.querySelectorAll('.quantity-controls').forEach(control => {
+                const input = control.querySelector('input');
+                const minusBtn = control.querySelector('.qty-btn:first-child');
+                const plusBtn = control.querySelector('.qty-btn:last-child');
+
+                minusBtn.addEventListener('click', () => {
+                    if (input.value > 1) {
+                        input.value = parseInt(input.value) - 1;
+                        updateTotal();
+                    }
+                });
+
+                plusBtn.addEventListener('click', () => {
+                    input.value = parseInt(input.value) + 1;
+                    updateTotal();
+                });
+            });
+
+            // Update total price
+            function updateTotal() {
+                let total = 0;
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const price = parseFloat(item.querySelector('.item-price').textContent.replace('$', ''));
+                    const quantity = parseInt(item.querySelector('input[type="number"]').value);
+                    total += price * quantity;
+                });
+
+                const tax = total * 0.1; // 10% tax
+                document.querySelector('.summary-row:first-child span:last-child').textContent = `$${total.toFixed(2)}`;
+                document.querySelector('.summary-row:nth-child(3) span:last-child').textContent = `$${tax.toFixed(2)}`;
+                document.querySelector('.total-row span:last-child').textContent = `$${(total + tax).toFixed(2)}`;
+            }
+
+            // Initialize counter
+            updateCartCounter();
+        </script>
+
+        // Add to cart functionality
+        let cartItemCount = parseInt(document.querySelector('.cart-counter').textContent);
+
+        function addToCart(button) {
+            cartItemCount++;
+            document.querySelector('.cart-counter').textContent = cartItemCount;
+            
+            // Visual feedback
+            button.classList.add('added');
+            button.textContent = 'Added to Cart';
+            
+            setTimeout(() => {
+                button.classList.remove('added');
+                button.textContent = 'Add to Cart';
+            }, 2000);
+        }
 </body>
 </html>

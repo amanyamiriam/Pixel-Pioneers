@@ -285,6 +285,149 @@ nav ul li a.active {
         height: 250px;
     }
 }
+
+.add-to-cart, .view-details, .shop-now, .subscribe-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.add-to-cart {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+}
+
+.view-details {
+    background: #f8f9fa;
+    color: #333;
+    border: 2px solid #ddd;
+    flex: 1;
+}
+
+.view-details:hover {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.release-date {
+    color: #4FACFE;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.release-date:hover {
+    color: #2E90FE;
+    text-decoration: underline;
+}
+
+.shop-now {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.shop-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+}
+
+.subscribe-btn {
+    background: #FF416C;
+    color: white;
+}
+
+.subscribe-btn:hover {
+    background: #FF4B2B;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .add-to-cart, .view-details, .shop-now, .subscribe-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+.release-date {
+    display: inline-block;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.release-date:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(45deg, #4ECDC4, #FF6B6B);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .release-date {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.signin-btn, .signup-btn, .logout-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signin-btn {
+    background: transparent;
+    border: 2px solid #FF416C;
+    color: #FF416C;
+}
+
+.signup-btn {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+}
+
+.logout-btn {
+    background: #4B4B4B;
+    color: white;
+    display: none;
+}
+
+.signin-btn:hover, .signup-btn:hover, .logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.2);
+}
 .sneaker-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

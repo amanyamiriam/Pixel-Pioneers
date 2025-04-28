@@ -883,6 +883,31 @@
         text-align: center;
     }
 }
+.admin-link {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+.admin-link {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
 .ai-chatbot {
     background: white;
     padding: 2rem;

@@ -1,0 +1,452 @@
+/* Hero Section */
+.releases-hero {
+    background: linear-gradient(135deg, #6366F1 0%, #2563EB 100%);
+    padding: 6rem 2rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    color: #FCD34D;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 100px;
+}
+
+.time {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #FCD34D;
+    display: block;
+}
+
+.label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Release Cards */
+.featured-releases {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.featured-releases h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3.5rem;
+    color: #1a1a1a;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.featured-releases h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    border-radius: 2px;
+}
+
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.release-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.release-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.status-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.3);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.release-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.hover-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem;
+    transition: bottom 0.3s ease;
+}
+
+.release-card:hover .hover-info {
+    bottom: 0;
+}
+
+.availability {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: white;
+    color: #FF416C;
+    transform: scale(1.1);
+}
+
+.card-details {
+    padding: 2rem;
+}
+
+.card-details h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.price-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FF416C;
+}
+
+.original-price {
+    font-size: 1.1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.size-btn {
+    padding: 0.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.size-btn.available:hover {
+    background: #FF416C;
+    color: white;
+    border-color: #FF416C;
+}
+
+.size-btn.sold-out {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f1f5f9;
+}
+
+.upcoming-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.upcoming-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2d3436;
+    position: relative;
+}
+
+.upcoming-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #6366F1, #2563EB);
+    border-radius: 2px;
+}
+
+.upcoming-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.upcoming-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.upcoming-card:hover {
+    transform: translateY(-10px);
+}
+
+.upcoming-card .card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.upcoming-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.upcoming-card:hover img {
+    transform: scale(1.05);
+}
+
+.release-countdown {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+}
+
+.expected-price {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.notify-btn {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #2563EB, #6366F1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.notify-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(45deg, #1E40AF, #4F46E5);
+}
+
+.notify-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.notify-btn .notify-success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.notify-btn.notified .notify-text,
+.notify-btn.notified .fa-bell {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.notify-btn.notified .notify-success {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.notify-btn.notified {
+    background: linear-gradient(45deg, #059669, #10B981);
+    pointer-events: none;
+}
+
+@media (hover: none) {
+    .notify-btn:hover {
+        transform: none;
+        background: linear-gradient(45deg, #2563EB, #6366F1);
+    }
+}
+
+@media (max-width: 768px) {
+    .notify-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+.notify-btn i {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .upcoming-section {
+        padding: 3rem 1rem;
+    }
+
+    .upcoming-section h2 {
+        font-size: 2rem;
+    }
+
+    .upcoming-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .upcoming-card img {
+        height: 250px;
+    }
+}
+.purchase-btn {
+    display: block;
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.purchase-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+    .featured-releases {
+        padding: 3rem 1rem;
+    }
+
+    .featured-releases h2 {
+        font-size: 2rem;
+    }
+
+    .releases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .size-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+
+    .size-btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}

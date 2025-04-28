@@ -16,6 +16,13 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="admin-dashboard.html" class="admin-link">Admin</a></li>
+                <li class="auth-buttons">
+                    <a href="signin.html" class="signin-btn">Sign In</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                    <a href="#" class="logout-btn" onclick="logout()">Log Out</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -52,7 +59,7 @@
                             <span class="current-price">$129.99</span>
                             <span class="original-price">$159.99</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button onclick="window.location.href='cart.html'">Add to Cart</button>
                     </div>
                 </div>
 
@@ -79,7 +86,7 @@
                             <span class="current-price">$89.99</span>
                             <span class="original-price">$119.99</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button onclick="window.location.href='cart.html'">Add to Cart</button>
                     </div>
                 </div>
 
@@ -106,7 +113,7 @@
                             <span class="current-price">$109.99</span>
                             <span class="original-price">$139.99</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button onclick="window.location.href='cart.html'">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -182,48 +189,48 @@
                     <img src="images/new1.jpg" alt="New Balance 550">
                     <h3>New Balance 550</h3>
                     <p class="price">$129.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
                 <div class="sneaker-card">
                     <div class="new-tag">New</div>
                     <img src="images/new2.jpg" alt="Puma RS-X">
                     <h3>Puma RS-X</h3>
                     <p class="price">$149.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
                 <div class="sneaker-card">
                     <div class="new-tag">New</div>
                     <img src="images/new3.jpg" alt="Reebok Classic">
                     <h3>Reebok Classic</h3>
                     <p class="price">$89.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
                 <div class="sneaker-card">
                     <div class="new-tag">New</div>
                     <img src="images/new4.jpg" alt="Nike Dunk Low">
                     <h3>Nike Dunk Low 'Panda'</h3>
                     <p class="price">$159.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
                 <div class="sneaker-card">
                     <div class="new-tag">New</div>
                     <img src="images/new5.jpg" alt="Yeezy Boost">
                     <h3>Yeezy Boost 350</h3>
                     <p class="price">$219.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
                 <div class="sneaker-card">
                     <div class="new-tag">New</div>
                     <img src="images/new6.jpg" alt="Air Jordan 1">
                     <h3>Air Jordan 1 High OG</h3>
                     <p class="price">$179.99</p>
-                    <p class="release-date">Just Released</p>
-                    <button>Shop Now</button>
+                    <a href="new-releases.html" class="release-date">Just Released</a>
+                    <a href="shop.html" class="shop-now">Shop Now</a>
                 </div>
             </div>
         </section>
@@ -280,9 +287,9 @@
             </div>
             <div class="footer-section">
                 <h4>Newsletter</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit">Subscribe</button>
+                <form class="newsletter-form" action="subscribe.html" method="POST">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -291,5 +298,33 @@
             <p>&copy; 2024 Pixel Pioneers. All rights reserved.</p>
         </div>
     </footer>
-</body>
-</html>
+    <script>
+            // Check if user is logged in
+            function checkLoginStatus() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                const authButtons = document.querySelector('.auth-buttons');
+                const signinBtn = authButtons.querySelector('.signin-btn');
+                const signupBtn = authButtons.querySelector('.signup-btn');
+                const logoutBtn = authButtons.querySelector('.logout-btn');
+    
+                if (isLoggedIn) {
+                    signinBtn.style.display = 'none';
+                    signupBtn.style.display = 'none';
+                    logoutBtn.style.display = 'inline-block';
+                } else {
+                    signinBtn.style.display = 'inline-block';
+                    signupBtn.style.display = 'inline-block';
+                    logoutBtn.style.display = 'none';
+                }
+            }
+    
+            function logout() {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'index.html';
+            }
+    
+            // Check login status when page loads
+            document.addEventListener('DOMContentLoaded', checkLoginStatus);
+        </script>
+    </body>
+    </html>

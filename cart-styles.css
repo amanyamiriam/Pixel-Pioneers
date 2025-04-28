@@ -226,6 +226,16 @@
     margin-top: 1rem;
 }
 
+.product-card button {
+    transition: all 0.3s ease;
+}
+
+.product-card button.added {
+    background: #4CAF50;
+    color: white;
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
     .cart-content {
         grid-template-columns: 1fr;
@@ -243,4 +253,24 @@
     .item-price {
         grid-column: 1 / -1;
     }
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FF416C;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
 }

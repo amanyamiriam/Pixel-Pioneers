@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pixel Pioneers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <form class="auth-form" onsubmit="handleSignUp(event)">
+            <h2>Create Account</h2>
+            <div class="message-box success" id="successMessage" style="display: none;">
+                Account created successfully! Redirecting...</div>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </form>
+    </div>
+    <script>
+        function handleSignUp(event) {
+            event.preventDefault();
+            const successMessage = document.getElementById('successMessage');
+            
+            // Store login state
+            localStorage.setItem('isLoggedIn', 'true');
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            
+            // Redirect after a short delay
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
